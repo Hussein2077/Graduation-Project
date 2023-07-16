@@ -22,6 +22,7 @@ class FakeSearch extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
+
             Padding(
               padding: const EdgeInsets.only(left: 10),
               child: Icon(
