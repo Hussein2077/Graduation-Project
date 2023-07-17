@@ -2,11 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import 'package:multi_store/controller/category_screen_controller.dart';
+import 'package:multi_store/utilities/categ_list.dart';
 import 'package:multi_store/view/minor_screens/search_screen.dart';
+import 'package:multi_store/view/widget/category.dart';
 
 import '../../utilities/app_style.dart';
 import '../../utilities/color.dart';
-import '../categories/men_category.dart';
+// import '../categories/accessories_categ.dart';
+// import '../categories/bags_categ.dart';
+// import '../categories/beauty_categ.dart';
+// import '../categories/electro_categ.dart';
+// import '../categories/home_garden_categ.dart';
+// import '../categories/kids_categ.dart';
+// import '../categories/men_categ.dart';
+// import '../categories/shoes_categ.dart';
+// import '../categories/women_categ.dart';
 
 class CategoryScreen extends StatelessWidget {
   const CategoryScreen({Key? key}) : super(key: key);
@@ -104,32 +114,16 @@ class CategoryScreen extends StatelessWidget {
                     controller.pageChanged(index);
                   },
                   scrollDirection: Axis.vertical,
-                  children: const [
-                    MenCategory(),
-                    Center(
-                      child: Text('women category'),
-                    ),
-                    Center(
-                      child: Text('electronics category'),
-                    ),
-                    Center(
-                      child: Text('accessories category'),
-                    ),
-                    Center(
-                      child: Text('shoes category'),
-                    ),
-                    Center(
-                      child: Text('home & garden category'),
-                    ),
-                    Center(
-                      child: Text('beauty category'),
-                    ),
-                    Center(
-                      child: Text('kids category'),
-                    ),
-                    Center(
-                      child: Text('bags category'),
-                    ),
+                  children: [
+                    Category(name: 'men', list: men),
+                    Category(name: 'women', list: women),
+                    Category(name: 'electronics', list: electronics),
+                    Category(name: 'accessories', list: accessories),
+                    Category(name: 'shoes', list: shoes),
+                    Category(name: 'home and garden', list: homeandgarden),
+                    Category(name: 'beauty', list: beauty),
+                    Category(name: 'kids', list: kids),
+                    Category(name: 'bags', list: bags),
                   ],
                 ),
               ));
